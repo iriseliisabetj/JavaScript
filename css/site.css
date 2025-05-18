@@ -1,0 +1,98 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3b3b3b;
+  background-color: #3b3b3b;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3.2em;
+  color: #fff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 5px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: large;
+  text-align: center;
+  line-height: 60px;
+  background-color: rgb(245, 192, 235);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.cell:hover {
+  background-color: rgb(181, 209, 255);
+}
+
+.cell.highlight:hover {
+  background-color: rgb(181, 209, 255);
+}
+
+.cell.highlight {
+  background-color: white;
+  border: 2px solid black;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #555;
+  border-radius: 5px;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+button.active {
+  background-color: rgb(245, 192, 235);
+  color: black;
+}
+
+button:hover {
+  background-color: rgb(181, 209, 255);
+}
+
+.game-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-container {
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+}
